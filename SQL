@@ -1,3 +1,5 @@
-SELECT Product.Name, Category.Name
-FROM Product LEFT JOIN  Category ON Product.id=Category.productId 
-ORDER BY Products.name;
+SELECT Products.ProductName, Categories.CategoryName
+FROM Products
+LEFT OUTER JOIN ProductCategory ON Products.ProductID = ProductCategory.ProductID
+LEFT OUTER JOIN Categories ON ProductCategory.CategoryID = Categories.CategoryID
+ORDER BY Products.ProductName;
